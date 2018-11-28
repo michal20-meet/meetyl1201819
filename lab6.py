@@ -18,18 +18,29 @@ from turtle import Turtle
 # s = Square(15,"yellow")
 # s.random_color()
 
-turtle.begin_poly()
-turtle.fd(100)
-turtle.left(20)
-turtle.fd(30)
-turtle.left(60)
-turtle.fd(50)
-turtle.end_poly()
-p = turtle.get_poly()
+
+#2
 
 class hexagon(Turtle):
-	def __init__(self, size):
+	def __init__(self, size, color):
 		Turtle.__init__(self)
-		self.shapesize(size)
-		self.
+
+		turtle.home()
+		turtle.begin_poly()
+		i = 6
+		turtle.pu()
+		for i in range(6):
+			turtle.fd(size)
+			turtle.left(60)
+		turtle.end_poly()
+		hexagon = turtle.get_poly()
+		turtle.register_shape("hexagon", hexagon)
+
+		self.color(color)
+		self.shape("hexagon")
+
+
+h = hexagon(400, "red")
+
+
 turtle.mainloop()
