@@ -27,7 +27,6 @@ class hexagon(Turtle):
 
 		turtle.home()
 		turtle.begin_poly()
-		i = 6
 		turtle.pu()
 		for i in range(6):
 			turtle.fd(size)
